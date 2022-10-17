@@ -1,0 +1,44 @@
+$amarelo: #FCE6A8;
+$verde: #8FBCB3;
+$cinza-claro: #DFE6ED;
+$cinza-medio: #C3CFD9;
+$cinza-escuro: #788895;
+$roxo: #AA6DC4;
+$azul: #96C3EB;
+$marrom: #C4BDAF;
+
+$quebraTablet: 2000px;
+$quebraMobile: 640px;
+
+
+body {
+    background-color: $verde;
+
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+    @media only screen and (max-width: $quebraTablet) {
+        background-color: $amarelo;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: $quebraMobile) {
+        background-color: $marrom;
+    }
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    height: 10px;
+
+    @media only screen and (max-width: $quebraTablet) {
+        background-color: $roxo;
+    }
+
+    @media only screen and (max-width: $quebraMobile) {
+        display: none;
+    }
+}

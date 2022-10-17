@@ -1,0 +1,50 @@
+body {
+  padding: 10px;
+  margin: 0;
+  background-color: #fce6a8;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-rows: 0.3fr 1fr 0.3fr;
+  gap: 10px;
+  grid-template-areas: "cabecalho cabecalho" "propagandas artigos" "rodape rodape";
+}
+@media screen and (max-width: 1080px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas: "cabecalho" "propagandas" "artigos" "rodape";
+  }
+}
+@media screen and (max-width: 640px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 0.3fr;
+    grid-template-areas: "cabecalho" "artigos" "rodape";
+  }
+}
+
+header {
+  background-color: green;
+  grid-area: cabecalho;
+}
+
+aside {
+  background-color: #aa6dc4;
+  grid-area: propagandas;
+}
+@media screen and (max-width: 640px) {
+  aside {
+    display: none;
+  }
+}
+
+main {
+  background-color: #96c3eb;
+  grid-area: artigos;
+}
+
+footer {
+  background-color: green;
+  grid-area: rodape;
+}/*# sourceMappingURL=style.css.map */
